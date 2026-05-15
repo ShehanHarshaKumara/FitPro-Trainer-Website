@@ -1,2 +1,11 @@
-# FitPro-Trainer-Website
-This project helps gym trainers build a professional online presence, manage fitness services, and connect with clients efficiently through a modern web platform.
+
+  # Gym Trainer Portfolio Website
+
+  This is a code bundle for Gym Trainer Portfolio Website. The original project is available at https://www.figma.com/design/DofNLWVgPQqZekSW9ZH8at/Gym-Trainer-Portfolio-Website.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
