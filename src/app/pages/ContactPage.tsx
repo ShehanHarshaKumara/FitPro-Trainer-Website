@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react";
+import { Phone, Mail, Instagram, Send, MessageCircle, Music2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 
@@ -24,26 +24,26 @@ export function ContactPage() {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+94 77 828 0693",
+      link: "tel:+94778280693",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "info@fitpro.com",
-      link: "mailto:info@fitpro.com",
+      value: "manuladamith@gmail.com",
+      link: "mailto:manuladamith@gmail.com",
     },
     {
-      icon: MapPin,
-      label: "Location",
-      value: "123 Fitness St, Gym City, GC 12345",
-      link: "#",
+      icon: Instagram,
+      label: "Instagram",
+      value: "@_manu_.d12",
+      link: "https://www.instagram.com/_manu_.d12?igsh=ejMyczR5ZTAzMDkz&utm_source=qr",
     },
     {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      value: "Chat with us",
-      link: "https://wa.me/15551234567",
+      icon: Music2,
+      label: "TikTok",
+      value: "@_manula_d",
+      link: "https://www.tiktok.com/@_manula_d?_r=1&_t=ZS-96UgFr3bx83",
     },
   ];
 
@@ -75,7 +75,7 @@ export function ContactPage() {
             >
               <h2 className="text-4xl mb-6">Let's Talk About Your <span className="text-primary">Goals</span></h2>
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                Ready to transform your life? Fill out the form and I'll get back to you within 24 hours to schedule your free consultation session.
+                Ready to transform your body and build healthier habits? Send a message and I will help you choose the right coaching path for your goals.
               </p>
 
               <div className="space-y-6">
@@ -103,7 +103,7 @@ export function ContactPage() {
               <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-orange-500/10 rounded-xl border border-primary/30">
                 <h3 className="text-xl mb-3">Free Consultation</h3>
                 <p className="text-white/70">
-                  Book your free 30-minute consultation session to discuss your fitness goals and find the perfect program for you.
+                  Book a consultation to discuss your current routine, fitness goals, nutrition challenges, and the best program for your transformation.
                 </p>
               </div>
             </motion.div>
@@ -161,7 +161,7 @@ export function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+94 77 828 0693"
                     />
                   </div>
 
@@ -198,8 +198,8 @@ export function ContactPage() {
       <section className="py-20 theme-section-orange">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4">Visit Our <span className="text-primary">Gym</span></h2>
-            <p className="text-white/60 text-xl">Located in the heart of the city</p>
+            <h2 className="text-4xl mb-4">Connect With <span className="text-primary">Manula D</span></h2>
+            <p className="text-white/60 text-xl">Follow the coaching journey and send a direct message</p>
           </div>
 
           <div className="relative h-96 rounded-xl overflow-hidden">
@@ -212,11 +212,11 @@ export function ContactPage() {
             <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
               <div className="bg-black/50 backdrop-blur-sm rounded-lg p-6 inline-block">
                 <div className="flex items-center gap-3 mb-2">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <h3 className="text-xl">FitPro Training Studio</h3>
+                  <MessageCircle className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl">Manula D Fitness Coaching</h3>
                 </div>
-                <p className="text-white/80">123 Fitness Street, Gym City, GC 12345</p>
-                <p className="text-white/60 mt-2">Open Monday - Saturday: 6:00 AM - 10:00 PM</p>
+                <p className="text-white/80">Online coaching, onsite personal training, and live video coaching available.</p>
+                <p className="text-white/60 mt-2">Email manuladamith@gmail.com or call +94 77 828 0693.</p>
               </div>
             </div>
           </div>

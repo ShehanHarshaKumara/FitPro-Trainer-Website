@@ -5,45 +5,52 @@ export function ServicesPage() {
   const services = [
     {
       icon: Dumbbell,
-      title: "Personal Training",
-      description: "One-on-one customized workout sessions tailored to your specific goals and fitness level",
-      features: ["Custom workout plans", "Form correction", "Progress tracking", "Flexible scheduling"],
+      title: "1-on-1 Personal Training",
+      description: "Onsite or live video coaching focused on technique correction, performance improvement, and real-time guidance.",
+      features: ["Onsite sessions", "Live video coaching", "Form correction", "Goal-based programming"],
       image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
+      icon: Monitor,
+      title: "Online Fitness Coaching",
+      description: "Complete remote coaching with customized workout plans, nutrition guidance, check-ins, and ongoing support.",
+      features: ["Remote coaching", "Workout guidance", "Nutrition support", "Progress check-ins"],
+      image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwdHJhaW5lciUyMGZpdG5lc3MlMjB3b3Jrb3V0fGVufDF8fHx8MTc3ODgzNzg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
       icon: Weight,
-      title: "Weight Loss Training",
-      description: "Scientifically designed programs combining cardio and strength training for optimal fat loss",
-      features: ["Calorie burn optimization", "Metabolism boosting", "Body composition analysis", "Sustainable results"],
+      title: "Fat Loss Coaching",
+      description: "Science-based fat loss strategies designed to reduce body fat while protecting lean muscle and lifestyle balance.",
+      features: ["Nutrition control", "Progressive training", "Body composition focus", "Sustainable habits"],
       image: "https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: TrendingUp,
-      title: "Muscle Building",
-      description: "Hypertrophy-focused programs designed to maximize muscle growth and strength gains",
-      features: ["Progressive overload", "Compound movements", "Muscle group targeting", "Recovery optimization"],
+      title: "Muscle Building Programs",
+      description: "Structured hypertrophy-focused coaching for lean muscle growth, strength, and natural physique development.",
+      features: ["Progressive overload", "Hypertrophy training", "Compound lifts", "Recovery planning"],
       image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: Heart,
-      title: "Cardio Fitness",
-      description: "Heart-healthy cardiovascular training to improve endurance, stamina, and overall health",
-      features: ["HIIT workouts", "Endurance building", "Heart rate monitoring", "Interval training"],
+      title: "Body Recomposition Coaching",
+      description: "A balanced strategy to build muscle and reduce fat through targeted training, nutrition, and accountability.",
+      features: ["Build muscle", "Reduce body fat", "Strategic nutrition", "Progress tracking"],
       image: "https://images.unsplash.com/photo-1596357395217-80de13130e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: Apple,
-      title: "Nutrition Guidance",
-      description: "Personalized meal plans and nutritional advice to complement your training and accelerate results",
-      features: ["Meal planning", "Macro calculations", "Supplement advice", "Healthy habits coaching"],
+      title: "Personalized Meal Plans",
+      description: "Practical nutrition plans tailored to your body, schedule, food preferences, and transformation goal.",
+      features: ["Meal planning", "Macro guidance", "Lifestyle fit", "Healthy habit coaching"],
       image: "https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: Monitor,
-      title: "Online Coaching",
-      description: "Remote training programs with video calls, workout tracking, and continuous support",
-      features: ["Video consultations", "App-based tracking", "24/7 support", "Global availability"],
-      image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwdHJhaW5lciUyMGZpdG5lc3MlMjB3b3Jrb3V0fGVufDF8fHx8MTc3ODgzNzg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      title: "Progress Tracking & Accountability",
+      description: "Regular assessments, plan updates, and continuous support to keep your transformation moving forward.",
+      features: ["Assessments", "Plan updates", "Check-ins", "Accountability support"],
+      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
 
@@ -60,7 +67,7 @@ export function ServicesPage() {
         </div>
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl mb-4">My <span className="text-primary">Services</span></h1>
-          <p className="text-xl text-white/80">Comprehensive training solutions for every goal</p>
+          <p className="text-xl text-white/80">Personalized coaching for fat loss, muscle building, and recomposition</p>
         </div>
       </section>
 

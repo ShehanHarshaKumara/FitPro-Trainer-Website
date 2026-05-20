@@ -25,7 +25,7 @@ export function HomePage() {
             className="max-w-3xl text-left"
           >
             <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/80 backdrop-blur md:text-sm">
-              Personal Training Studio
+              Manula D Fitness Coaching
             </div>
             <h1 className="mb-6 max-w-4xl text-5xl font-black uppercase leading-none tracking-normal text-white drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
               Transform
@@ -34,7 +34,7 @@ export function HomePage() {
               </span>
             </h1>
             <p className="mb-9 max-w-2xl border-l-4 border-primary pl-5 text-lg font-medium leading-8 text-white/90 md:text-xl">
-              "Success is not final, failure is not fatal: it is the courage to continue that counts."
+              Build a stronger physique, healthier habits, and lasting confidence through science-based training and personalized nutrition.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
@@ -85,10 +85,10 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: Dumbbell, label: "10+ Years", sublabel: "Experience" },
-              { icon: Users, label: "500+", sublabel: "Clients Trained" },
-              { icon: Target, label: "95%", sublabel: "Success Rate" },
-              { icon: Award, label: "15+", sublabel: "Certifications" },
+              { icon: Dumbbell, label: "8+ Years", sublabel: "Training Experience" },
+              { icon: Users, label: "5+ Years", sublabel: "Coaching" },
+              { icon: Target, label: "8+ Years", sublabel: "Natural Athlete" },
+              { icon: Award, label: "NASM", sublabel: "Certified Trainer" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -112,25 +112,25 @@ export function HomePage() {
       <section className="py-20 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl mb-4">Why Choose <span className="text-primary">FitPro</span></h2>
-            <p className="text-white/60 text-xl">Your journey to fitness excellence starts here</p>
+            <h2 className="text-4xl md:text-5xl mb-4">Why Choose <span className="text-primary">Manula D</span></h2>
+            <p className="text-white/60 text-xl">Smart coaching for real, sustainable transformation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Personalized Plans",
-                description: "Custom workout and nutrition plans tailored to your goals and fitness level",
+                description: "Custom workout and nutrition plans tailored to your goals, lifestyle, and current fitness level",
                 image: "https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
               },
               {
                 title: "Expert Guidance",
-                description: "Professional training with certified expertise in strength, cardio, and nutrition",
+                description: "Certified coaching supported by 8+ years of natural bodybuilding and physique development experience",
                 image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
               },
               {
                 title: "Real Results",
-                description: "Proven track record of transformations with 500+ successful client stories",
+                description: "A results-driven system built on consistency, discipline, accountability, and science-based training",
                 image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwdHJhaW5lciUyMGZpdG5lc3MlMjB3b3Jrb3V0fGVufDF8fHx8MTc3ODgzNzg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
               },
             ].map((feature, index) => (
@@ -162,7 +162,7 @@ export function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl mb-6">Ready to Start Your <span className="text-primary">Journey</span>?</h2>
           <p className="text-white/60 text-xl mb-8">
-            Join hundreds of successful clients who have transformed their lives through fitness
+            Start with structured coaching that removes confusion and helps you build powerful natural results.
           </p>
           <Link
             to="/contact"

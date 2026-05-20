@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Dumbbell, Mail, Phone, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Dumbbell, Mail, Phone, Instagram, Music2 } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,21 +12,30 @@ export function Footer() {
                 <Dumbbell className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl">
-                FitPro<span className="text-primary">.</span>
+                Manula<span className="text-primary">D</span>
               </span>
             </div>
             <p className="text-white/60">
-              Transform your body, transform your life. Professional training for real results.
+              Science-based fitness coaching for fat loss, muscle building, body recomposition, and natural physique development.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+              <a
+                href="https://www.instagram.com/_manu_.d12?igsh=ejMyczR5ZTAzMDkz&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 bg-white/5 hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/5 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a
+                href="https://www.tiktok.com/@_manula_d?_r=1&_t=ZS-96UgFr3bx83"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+                className="w-10 h-10 bg-white/5 hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+              >
+                <Music2 className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -55,22 +64,22 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/60">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+94 77 828 0693</span>
               </li>
               <li className="flex items-center gap-3 text-white/60">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>info@fitpro.com</span>
+                <span>manuladamith@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 text-white/60">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span>123 Fitness St, Gym City</span>
+                <Instagram className="w-4 h-4 text-primary" />
+                <span>@_manu_.d12</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/40">
-          <p>&copy; 2026 FitPro. All rights reserved.</p>
+          <p>&copy; 2026 Manula D Fitness Coaching. All rights reserved.</p>
         </div>
       </div>
     </footer>

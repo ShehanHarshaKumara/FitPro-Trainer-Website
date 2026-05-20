@@ -1,88 +1,104 @@
-import { Clock, Users, TrendingUp, Home, Dumbbell } from "lucide-react";
+import { Clock, Users, TrendingUp, Home, Dumbbell, Target } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
 
 export function ProgramsPage() {
   const programs = [
     {
-      icon: Users,
-      title: "Beginner Workout Plan",
-      duration: "8 Weeks",
-      level: "Beginner",
-      description: "Perfect for those starting their fitness journey. Learn proper form and build a solid foundation.",
-      features: [
-        "3 days per week training",
-        "Full body workouts",
-        "Basic exercise techniques",
-        "Progress tracking system",
-        "Nutrition basics guide",
-        "Video demonstrations",
-      ],
-      image: "https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
       icon: TrendingUp,
-      title: "Fat Loss Program",
+      title: "Fat Loss Transformation Program",
       duration: "12 Weeks",
       level: "All Levels",
-      description: "Science-based program combining strength training and cardio for maximum fat burning results.",
+      description: "Structured plan focused on reducing body fat while maintaining lean muscle through progressive training and nutrition control.",
       features: [
-        "5 days per week training",
-        "HIIT cardio sessions",
-        "Strength training focus",
-        "Custom meal plans",
-        "Weekly check-ins",
+        "Progressive strength training",
+        "Fat loss nutrition strategy",
         "Body composition tracking",
+        "Weekly accountability",
+        "Cardio guidance",
+        "Sustainable habit building",
       ],
       image: "https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: Dumbbell,
-      title: "Muscle Gain Program",
+      title: "Muscle Building Program",
       duration: "16 Weeks",
       level: "Intermediate",
-      description: "Hypertrophy-focused training designed to pack on lean muscle mass with progressive overload.",
+      description: "Hypertrophy-based training system designed to increase muscle size, strength, and overall physique development.",
       features: [
-        "4-5 days per week training",
-        "Muscle group split routine",
-        "Progressive overload protocol",
-        "High protein meal plans",
-        "Supplement recommendations",
-        "Recovery optimization",
+        "Hypertrophy-focused splits",
+        "Progressive overload system",
+        "Compound movement focus",
+        "Recovery management",
+        "Nutrition for lean mass",
+        "Exercise technique refinement",
       ],
       image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      icon: Target,
+      title: "Body Recomposition Program",
+      duration: "12 Weeks",
+      level: "All Levels",
+      description: "Balanced approach to simultaneously build muscle and reduce fat with strategic training and nutrition.",
+      features: [
+        "Strength and hypertrophy blend",
+        "Nutrition periodization",
+        "Body measurements tracking",
+        "Goal-based adjustments",
+        "Consistency systems",
+        "Technique coaching",
+      ],
+      image: "https://images.unsplash.com/photo-1648542036561-e1d66a5ae2b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      icon: Clock,
+      title: "Strength & Performance Program",
+      duration: "12 Weeks",
+      level: "Intermediate",
+      description: "Focused on improving overall strength, power, and athletic performance using compound lifts and progressive overload.",
+      features: [
+        "Compound lift progression",
+        "Strength testing",
+        "Performance tracking",
+        "Mobility support",
+        "Recovery planning",
+        "Training intensity control",
+      ],
+      image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      icon: Users,
+      title: "Beginner Foundation Program",
+      duration: "8 Weeks",
+      level: "Beginner",
+      description: "Step-by-step introduction to proper training techniques, movement patterns, and fitness fundamentals.",
+      features: [
+        "Exercise technique basics",
+        "Full-body training",
+        "Movement pattern coaching",
+        "Nutrition foundations",
+        "Confidence building",
+        "Simple progress tracking",
+      ],
+      image: "https://images.unsplash.com/photo-1596357395217-80de13130e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
       icon: Home,
       title: "Home Workout Program",
       duration: "10 Weeks",
       level: "All Levels",
-      description: "Effective workouts you can do at home with minimal equipment. No gym membership required.",
+      description: "Effective training plan using minimal or no equipment, designed for consistency, fat loss, or maintenance.",
       features: [
-        "4 days per week training",
-        "Bodyweight exercises",
-        "Minimal equipment needed",
-        "Space-efficient workouts",
+        "Minimal equipment options",
+        "Bodyweight progressions",
         "Flexible scheduling",
-        "Online support community",
+        "Space-efficient workouts",
+        "Fat loss or maintenance focus",
+        "Remote support",
       ],
-      image: "https://images.unsplash.com/photo-1596357395217-80de13130e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    },
-    {
-      icon: Clock,
-      title: "Strength Training Program",
-      duration: "12 Weeks",
-      level: "Advanced",
-      description: "Build maximum strength with powerlifting-inspired programming and advanced techniques.",
-      features: [
-        "4 days per week training",
-        "Compound movement focus",
-        "Periodization protocol",
-        "Strength testing sessions",
-        "Form video analysis",
-        "Competition preparation",
-      ],
-      image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwdHJhaW5lciUyMGZpdG5lc3MlMjB3b3Jrb3V0fGVufDF8fHx8MTc3ODgzNzg3Nnww&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];
 
@@ -99,7 +115,7 @@ export function ProgramsPage() {
         </div>
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl mb-4">Training <span className="text-primary">Programs</span></h1>
-          <p className="text-xl text-white/80">Choose the perfect program for your goals</p>
+          <p className="text-xl text-white/80">Structured systems for natural results and long-term progress</p>
         </div>
       </section>
 

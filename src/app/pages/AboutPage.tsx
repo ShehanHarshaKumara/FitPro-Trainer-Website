@@ -4,17 +4,30 @@ import { motion } from "motion/react";
 export function AboutPage() {
   const certifications = [
     "NASM Certified Personal Trainer",
-    "Sports Nutrition Specialist",
-    "Corrective Exercise Specialist",
-    "Olympic Weightlifting Coach",
-    "Crossfit Level 2 Trainer",
-    "Yoga Alliance RYT-200",
+    "8+ Years as a Natural Bodybuilding Athlete",
+    "5+ Years of Professional Fitness Coaching",
+    "Evidence-Based Training & Physique Development",
   ];
 
   const skills = [
-    { icon: Target, label: "Goal Setting", desc: "Strategic planning for sustainable results" },
-    { icon: Heart, label: "Motivation", desc: "Inspiring clients to push beyond limits" },
-    { icon: Award, label: "Expertise", desc: "10+ years of professional experience" },
+    { icon: Target, label: "Personalized Coaching", desc: "Structured workout and nutrition guidance built around each client's goal" },
+    { icon: Heart, label: "Accountability", desc: "Consistent progress tracking, support, and practical habit building" },
+    { icon: Award, label: "Natural Physique Expertise", desc: "Real-world bodybuilding experience applied through science-based programming" },
+  ];
+
+  const coachingSkills = [
+    "Personalized Fitness Coaching",
+    "Strength & Hypertrophy Programming",
+    "Fat Loss Coaching",
+    "Body Recomposition Strategies",
+    "Customized Nutrition Planning",
+    "Progressive Overload Programming",
+    "Exercise Technique Correction",
+    "Client Progress Tracking",
+    "Transformation Coaching",
+    "Online & Onsite Personal Training",
+    "Accountability Coaching",
+    "Natural Bodybuilding Guidance",
   ];
 
   return (
@@ -30,7 +43,7 @@ export function AboutPage() {
         </div>
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl mb-4">About <span className="text-primary">Me</span></h1>
-          <p className="text-xl text-white/80">Your Partner in Fitness Excellence</p>
+          <p className="text-xl text-white/80">Science-based coaching for natural, lasting transformation</p>
         </div>
       </section>
 
@@ -58,17 +71,20 @@ export function AboutPage() {
             >
               <h2 className="text-4xl mb-6">My <span className="text-primary">Story</span></h2>
               <p className="text-white/70 text-lg mb-6 leading-relaxed">
-                I am a professional gym trainer helping people build strength, lose weight, and improve their lifestyle through personalized fitness plans.
+                I'm Manula D, a dedicated fitness coach and natural bodybuilding athlete with 8+ years of experience in training, physique development, and fitness transformation.
               </p>
               <p className="text-white/70 text-lg mb-6 leading-relaxed">
-                My fitness journey began over 10 years ago when I transformed my own life through dedication and proper training. Since then, I've dedicated my career to helping others achieve their fitness goals and unlock their full potential.
+                My journey began with a passion for understanding how proper training, nutrition, and consistency can naturally transform the body. Over the years, that passion developed into a professional coaching career focused on helping people achieve real results through structured, personalized guidance.
+              </p>
+              <p className="text-white/70 text-lg mb-6 leading-relaxed">
+                I specialize in fat loss, muscle building, body recomposition, customized nutrition planning, and performance improvement. My approach is built on science-based training principles, progressive overload, discipline, and long-term sustainability.
               </p>
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                With expertise in strength training, weight loss, muscle building, and nutrition, I create customized programs that deliver real, sustainable results. Every client is unique, and I believe in tailoring each plan to individual needs and goals.
+                My mission is to simplify fitness, remove confusion, and help every client build a stronger body, healthier habits, greater confidence, and a stronger mindset through professional coaching and accountability.
               </p>
 
               <div className="space-y-3">
-                {["10+ Years of Training Experience", "500+ Successful Transformations", "Certified in Multiple Disciplines"].map((item, index) => (
+                {["8+ Years Natural Bodybuilding Experience", "5+ Years Professional Coaching Experience", "Customized Training & Nutrition Systems"].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0" />
                     <span className="text-white/80">{item}</span>
@@ -84,7 +100,7 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Special <span className="text-primary">Skills</span></h2>
-            <p className="text-white/60 text-xl">What sets me apart from the rest</p>
+            <p className="text-white/60 text-xl">Coaching built for real-world transformation</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -112,7 +128,7 @@ export function AboutPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4"><span className="text-primary">Certifications</span> & Credentials</h2>
-            <p className="text-white/60 text-xl">Professionally certified and continuously learning</p>
+            <p className="text-white/60 text-xl">Professional credentials backed by years of practical training experience</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -127,6 +143,42 @@ export function AboutPage() {
               >
                 <Award className="w-8 h-8 text-primary flex-shrink-0" />
                 <span className="text-lg">{cert}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="https://credentials.nasm.org/a7b9b554-45ff-4613-ab11-8ac65fb5dad1?utm_source=tiktok&utm_medium=social"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 font-medium text-white transition-all hover:bg-primary/90"
+            >
+              View NASM Credential
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 theme-section-red">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl mb-4">Coaching <span className="text-primary">Expertise</span></h2>
+            <p className="text-white/60 text-xl">The core skills behind every transformation plan</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {coachingSkills.map((skill, index) => (
+              <motion.div
+                key={skill}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: index * 0.03 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 p-4"
+              >
+                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-white/80">{skill}</span>
               </motion.div>
             ))}
           </div>

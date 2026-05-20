@@ -13,7 +13,7 @@ function WhatsAppChatButton() {
       href={WHATSAPP_CHAT_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with FitPro Trainer on WhatsApp"
+      aria-label="Chat with Manula D on WhatsApp"
       className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_30px_rgba(37,211,102,0.35)] transition duration-300 hover:-translate-y-1 hover:bg-[#20bd5a] hover:shadow-[0_18px_38px_rgba(37,211,102,0.45)] focus:outline-none focus:ring-4 focus:ring-[#25D366]/35 sm:bottom-7 sm:right-7 sm:h-16 sm:w-16"
     >
       <WhatsAppIcon fontSize="large" aria-hidden="true" />
@@ -44,7 +44,7 @@ export function RootLayout() {
             }
           });
         },
-        { threshold: 0.16, rootMargin: "0px 0px -80px 0px" },
+        { threshold: 0.01, rootMargin: "0px 0px -48px 0px" },
       );
 
       sections.forEach((section, index) => {

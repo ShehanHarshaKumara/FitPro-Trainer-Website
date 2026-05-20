@@ -6,53 +6,52 @@ export function PricingPage() {
   const plans = [
     {
       icon: Target,
-      name: "Monthly Plan",
-      price: "$199",
-      period: "per month",
-      description: "Perfect for getting started with professional training",
+      name: "Online Coaching",
+      price: "Custom",
+      period: "plan",
+      description: "Remote coaching for structured training, nutrition, and accountability",
       features: [
-        "4 personal training sessions/month",
-        "Custom workout plan",
+        "Custom workout program",
         "Nutrition guidance",
-        "Progress tracking",
-        "Email support",
-        "Access to training app",
+        "Weekly progress check-ins",
+        "Accountability support",
+        "Goal-based adjustments",
+        "Remote coaching access",
       ],
       popular: false,
     },
     {
       icon: Zap,
-      name: "Personal Training Plan",
-      price: "$349",
-      period: "per month",
-      description: "Most popular choice for serious fitness goals",
+      name: "1-on-1 Personal Training",
+      price: "Custom",
+      period: "plan",
+      description: "Onsite or live video coaching for serious transformation goals",
       features: [
-        "8 personal training sessions/month",
-        "Custom workout & meal plans",
-        "Weekly progress check-ins",
-        "Body composition analysis",
-        "Priority email & text support",
-        "Access to all programs",
-        "Supplement recommendations",
+        "Onsite or live video sessions",
+        "Technique correction",
+        "Custom workout and meal guidance",
+        "Body composition tracking",
+        "Progressive overload programming",
+        "Priority support",
+        "Regular plan updates",
       ],
       popular: true,
     },
     {
       icon: Crown,
-      name: "Premium Fitness Package",
-      price: "$599",
-      period: "per month",
-      description: "Ultimate package for complete transformation",
+      name: "Transformation Coaching",
+      price: "Custom",
+      period: "plan",
+      description: "Complete coaching system for fat loss, muscle building, or body recomposition",
       features: [
-        "12 personal training sessions/month",
-        "Fully customized programs",
-        "Daily check-ins & support",
-        "Monthly body composition tests",
-        "24/7 priority support",
-        "Access to all programs",
-        "Custom supplement plan",
-        "Meal prep guidance",
-        "Free merchandise",
+        "Fully customized training plan",
+        "Personalized nutrition strategy",
+        "Frequent accountability check-ins",
+        "Monthly progress review",
+        "Exercise technique feedback",
+        "Fat loss or muscle-building focus",
+        "Body recomposition strategy",
+        "Habit and mindset support",
       ],
       popular: false,
     },
@@ -60,18 +59,18 @@ export function PricingPage() {
 
   const onlinePlan = {
     icon: Target,
-    name: "Online Coaching Plan",
-    price: "$129",
-    period: "per month",
-    description: "Train anywhere with remote coaching",
+    name: "Natural Bodybuilding Guidance",
+    price: "By Goal",
+    period: "program",
+    description: "Physique-focused guidance informed by 8+ years as a natural bodybuilding athlete",
     features: [
       "Custom workout program",
+      "Hypertrophy programming",
       "Video form analysis",
-      "Weekly video check-ins",
-      "Custom meal plans",
-      "App-based tracking",
-      "Email & chat support",
-      "Global availability",
+      "Nutrition planning",
+      "Progress tracking",
+      "Recovery guidance",
+      "Online support",
     ],
   };
 
@@ -87,8 +86,8 @@ export function PricingPage() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl mb-4">Pricing <span className="text-primary">Plans</span></h1>
-          <p className="text-xl text-white/80">Invest in yourself and achieve your goals</p>
+          <h1 className="text-5xl md:text-6xl mb-4">Coaching <span className="text-primary">Plans</span></h1>
+          <p className="text-xl text-white/80">Choose the support level that fits your transformation goal</p>
         </div>
       </section>
 
@@ -96,7 +95,7 @@ export function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4">Choose Your <span className="text-primary">Plan</span></h2>
-            <p className="text-white/60 text-xl">Flexible options to fit your schedule and budget</p>
+            <p className="text-white/60 text-xl">Final pricing is discussed after understanding your goals and coaching needs</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -186,7 +185,7 @@ export function PricingPage() {
                   to="/contact"
                   className="px-8 py-4 bg-primary hover:bg-primary/90 rounded-lg transition-all whitespace-nowrap"
                 >
-                  Start Online
+                  Ask About This
                 </Link>
               </div>
             </div>
@@ -199,12 +198,12 @@ export function PricingPage() {
           <h2 className="text-4xl mb-8">All Plans Include</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              "No long-term contracts",
-              "Cancel anytime",
-              "First session satisfaction guarantee",
-              "Flexible rescheduling",
-              "Access to training resources",
-              "Community support group",
+              "Customized training structure",
+              "Practical nutrition guidance",
+              "Progress tracking",
+              "Accountability support",
+              "Technique-focused coaching",
+              "Goal-based program updates",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
                 <Check className="w-5 h-5 text-primary flex-shrink-0" />
