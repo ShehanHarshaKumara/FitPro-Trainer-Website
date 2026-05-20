@@ -1,6 +1,102 @@
-import { Phone, Mail, Instagram, Send, MessageCircle, Music2 } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+
+function PhoneBrandIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="12" cy="12" r="11" fill="#22C55E" />
+      <path
+        fill="#FFFFFF"
+        d="M16.9 14.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.3 2.4 3.7 5.8 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.8 2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.5Z"
+      />
+    </svg>
+  );
+}
+
+function GoogleMailIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path fill="#4285F4" d="M20.5 6.5v11.1c0 .8-.7 1.4-1.5 1.4h-3.1V11.9l4.6-5.4Z" />
+      <path fill="#34A853" d="M3.5 6.5v11.1c0 .8.7 1.4 1.5 1.4h3.1v-7.1L3.5 6.5Z" />
+      <path fill="#FBBC04" d="M15.9 19V11.9L12 14.8l-3.9-2.9V19h7.8Z" />
+      <path fill="#EA4335" d="M3.5 6.5 12 12.9l8.5-6.4V6.4c0-.9-1-1.5-1.8-.9L12 10.5 5.3 5.5c-.8-.6-1.8 0-1.8.9v.1Z" />
+    </svg>
+  );
+}
+
+function InstagramBrandIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <radialGradient id="instagram-gradient" cx="30%" cy="107%" r="150%">
+          <stop offset="0%" stopColor="#FDF497" />
+          <stop offset="5%" stopColor="#FDF497" />
+          <stop offset="45%" stopColor="#FD5949" />
+          <stop offset="60%" stopColor="#D6249F" />
+          <stop offset="90%" stopColor="#285AEB" />
+        </radialGradient>
+      </defs>
+      <rect width="22" height="22" x="1" y="1" rx="6" fill="url(#instagram-gradient)" />
+      <path
+        fill="#FFFFFF"
+        d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2Zm0 7.9A3.1 3.1 0 1 1 12 8.9a3.1 3.1 0 0 1 0 6.2Zm5-8.1a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0Z"
+      />
+      <path
+        fill="#FFFFFF"
+        d="M16.1 3.8H7.9a4.1 4.1 0 0 0-4.1 4.1v8.2a4.1 4.1 0 0 0 4.1 4.1h8.2a4.1 4.1 0 0 0 4.1-4.1V7.9a4.1 4.1 0 0 0-4.1-4.1Zm2.5 12.3a2.5 2.5 0 0 1-2.5 2.5H7.9a2.5 2.5 0 0 1-2.5-2.5V7.9a2.5 2.5 0 0 1 2.5-2.5h8.2a2.5 2.5 0 0 1 2.5 2.5v8.2Z"
+      />
+    </svg>
+  );
+}
+
+function TikTokBrandIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="12" cy="12" r="11" fill="#050505" />
+      <path
+        fill="#25F4EE"
+        d="M10.7 10.4v-1.1a5 5 0 0 0-.8-.1 4.2 4.2 0 0 0-4.2 4.2 4.1 4.1 0 0 0 1.8 3.4 4.1 4.1 0 0 1-.7-2.3 4.2 4.2 0 0 1 3.9-4.1Z"
+      />
+      <path
+        fill="#25F4EE"
+        d="M10.8 15.8a1.9 1.9 0 0 0 1.9-1.9V4.8H15a3.9 3.9 0 0 1-.1-.8h-3.1v9.1a1.9 1.9 0 0 1-2.7 1.7 1.9 1.9 0 0 0 1.7 1Z"
+      />
+      <path
+        fill="#FE2C55"
+        d="M15 4.8a3.9 3.9 0 0 0 3.1 3.1V6.8a3.9 3.9 0 0 1-2.3-2H15ZM9.9 12.3a1.9 1.9 0 0 0-.8 3.6 1.9 1.9 0 0 1 1.6-2.9c.3 0 .5 0 .8.1v-2.7a5 5 0 0 0-.8-.1v2.1a2.2 2.2 0 0 0-.8-.1Z"
+      />
+      <path
+        fill="#FE2C55"
+        d="M18.1 7.9v2.4a6.7 6.7 0 0 1-3.9-1.2v5.7a4.2 4.2 0 0 1-6.7 3.4 4.2 4.2 0 0 0 7.7-2.4v-5.7a6.7 6.7 0 0 0 3.9 1.2V8c-.3 0-.7-.1-1-.1Z"
+      />
+      <path
+        fill="#FFFFFF"
+        d="M14.2 14.8V9.1a6.7 6.7 0 0 0 3.9 1.2V7.9A3.9 3.9 0 0 1 15 4.8h-2.3v9.1a1.9 1.9 0 1 1-1.9-1.9c.3 0 .5 0 .8.1V9.3a4.2 4.2 0 0 0-.8-.1 4.2 4.2 0 1 0 3.4 5.6Z"
+      />
+    </svg>
+  );
+}
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -22,25 +118,25 @@ export function ContactPage() {
 
   const contactInfo = [
     {
-      icon: Phone,
+      icon: PhoneBrandIcon,
       label: "Phone",
       value: "+94 77 828 0693",
       link: "tel:+94778280693",
     },
     {
-      icon: Mail,
+      icon: GoogleMailIcon,
       label: "Email",
       value: "manuladamith@gmail.com",
       link: "mailto:manuladamith@gmail.com",
     },
     {
-      icon: Instagram,
+      icon: InstagramBrandIcon,
       label: "Instagram",
       value: "@_manu_.d12",
       link: "https://www.instagram.com/_manu_.d12?igsh=ejMyczR5ZTAzMDkz&utm_source=qr",
     },
     {
-      icon: Music2,
+      icon: TikTokBrandIcon,
       label: "TikTok",
       value: "@_manula_d",
       link: "https://www.tiktok.com/@_manula_d?_r=1&_t=ZS-96UgFr3bx83",
@@ -89,8 +185,8 @@ export function ContactPage() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 p-6 bg-white/5 rounded-xl border border-white/10 hover:border-primary/50 transition-all group"
                   >
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-primary" />
+                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl border border-white/20 bg-white p-2 shadow-xl shadow-black/25 transition-all group-hover:scale-105 group-hover:shadow-primary/15">
+                      <item.icon className="h-11 w-11" />
                     </div>
                     <div>
                       <p className="text-white/60 text-sm mb-1">{item.label}</p>

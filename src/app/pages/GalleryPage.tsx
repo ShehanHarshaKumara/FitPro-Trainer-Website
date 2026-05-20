@@ -98,17 +98,17 @@ export function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-24 theme-section-red">
+      <section className="py-16 theme-section-red">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4">Client <span className="text-primary">Transformations</span></h2>
-            <p className="text-white/60 text-xl">Before and after success stories</p>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl mb-3">Client <span className="text-primary">Transformations</span></h2>
+            <p className="text-white/60 text-lg">Before and after success stories</p>
           </div>
 
-          <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-black/45 p-3 shadow-2xl shadow-black/40 backdrop-blur md:p-5">
-            <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-[1.65fr_0.65fr]">
+          <div className="relative w-full overflow-hidden rounded-xl border border-white/10 bg-black/45 p-3 shadow-2xl shadow-black/40 backdrop-blur md:p-4">
+            <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[1.7fr_0.6fr]">
               <div
-                className="group relative min-h-[520px] cursor-pointer overflow-hidden rounded-xl bg-white/5 sm:min-h-[620px] lg:min-h-[720px]"
+                className="group relative min-h-[360px] cursor-pointer overflow-hidden rounded-lg bg-white/5 sm:min-h-[440px] lg:min-h-[520px]"
                 onClick={() => setSelectedImage(activeItem.image)}
               >
                 <AnimatePresence mode="wait">
@@ -124,12 +124,12 @@ export function GalleryPage() {
                   />
                 </AnimatePresence>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-                <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-black/50 px-4 py-2 text-sm font-semibold text-white backdrop-blur">
+                <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
                   {String(activeTransformation + 1).padStart(2, "0")} / {String(transformations.length).padStart(2, "0")}
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between rounded-xl border border-white/10 bg-white/[0.06] p-5 lg:p-6">
+              <div className="flex flex-col justify-between rounded-lg border border-white/10 bg-white/[0.06] p-4 lg:p-5">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeItem.title}
@@ -138,20 +138,20 @@ export function GalleryPage() {
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                       Transformation Story
                     </p>
-                    <h3 className="mb-4 text-3xl font-bold md:text-4xl">{activeItem.title}</h3>
-                    <p className="text-base leading-7 text-white/70 lg:text-lg lg:leading-8">{activeItem.description}</p>
+                    <h3 className="mb-3 text-2xl font-bold md:text-3xl">{activeItem.title}</h3>
+                    <p className="text-sm leading-6 text-white/70 lg:text-base lg:leading-7">{activeItem.description}</p>
                   </motion.div>
                 </AnimatePresence>
 
-                <div className="mt-8">
-                  <div className="mb-6 flex items-center gap-3">
+                <div className="mt-6">
+                  <div className="mb-5 flex items-center gap-3">
                     <button
                       type="button"
                       onClick={showPreviousTransformation}
-                      className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-all hover:border-primary hover:bg-primary"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-all hover:border-primary hover:bg-primary"
                       aria-label="Previous transformation"
                     >
                       <ChevronLeft className="h-5 w-5" />
@@ -159,7 +159,7 @@ export function GalleryPage() {
                     <button
                       type="button"
                       onClick={showNextTransformation}
-                      className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-all hover:border-primary hover:bg-primary"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-all hover:border-primary hover:bg-primary"
                       aria-label="Next transformation"
                     >
                       <ChevronRight className="h-5 w-5" />
@@ -183,13 +183,13 @@ export function GalleryPage() {
               </div>
             </div>
 
-            <div className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div className="mt-4 grid grid-cols-3 gap-3 lg:grid-cols-6">
               {transformations.map((item, index) => (
                 <button
                   key={item.title}
                   type="button"
                   onClick={() => setActiveTransformation(index)}
-                  className={`group relative h-28 overflow-hidden rounded-lg border transition-all sm:h-34 md:h-36 lg:h-32 ${
+                  className={`group relative h-20 overflow-hidden rounded-lg border transition-all sm:h-24 lg:h-24 ${
                     activeTransformation === index
                       ? "border-primary shadow-lg shadow-primary/20"
                       : "border-white/10 opacity-65 hover:border-white/40 hover:opacity-100"
