@@ -1,6 +1,7 @@
 import { Send, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function PhoneBrandIcon({ className }: { className?: string }) {
   return (
@@ -108,7 +109,31 @@ export function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! I will get back to you soon.");
+
+    const subject = encodeURIComponent(`Fitness coaching enquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone || "Not provided"}`,
+        "",
+        "Message:",
+        formData.message,
+      ].join("\n"),
+    );
+
+    window.location.href = `mailto:manuladamith@gmail.com?subject=${subject}&body=${body}`;
+
+    Swal.fire({
+      title: "Message Ready",
+      text: "Your email app should open with the message prepared for manuladamith@gmail.com.",
+      icon: "success",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#ef4444",
+      background: "#111111",
+      color: "#ffffff",
+    });
+
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
