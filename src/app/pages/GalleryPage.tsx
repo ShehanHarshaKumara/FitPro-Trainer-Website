@@ -9,34 +9,70 @@ export function GalleryPage() {
 
   const transformations = [
     {
-      image: "https://images.unsplash.com/photo-1608054604374-999be726cf9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img3.jpeg",
+      afterImage: "/assets/img4.jpeg",
       title: "12 Week Transformation",
-      description: "Lost 25 lbs, gained muscle definition",
+      description: "Before and after progress from focused training and nutrition",
     },
     {
-      image: "https://images.unsplash.com/photo-1584952811178-17383f34d7f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img5.jpeg",
+      afterImage: "/assets/img6.jpeg",
       title: "Body Recomposition",
-      description: "8 weeks of dedicated training",
+      description: "Leaner shape with improved muscle definition",
     },
     {
-      image: "https://images.unsplash.com/photo-1584952811368-02328c3e7eb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img7.jpeg",
+      afterImage: "/assets/img8.jpeg",
       title: "Muscle Building Success",
-      description: "16 weeks muscle gain program",
+      description: "Stronger physique built through progressive training",
     },
     {
-      image: "https://images.unsplash.com/photo-1694712301309-820f152bef41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img9.jpeg",
+      afterImage: "/assets/img10.jpeg",
       title: "Strength Gains",
-      description: "Advanced strength program results",
+      description: "Visible progress from consistent strength work",
     },
     {
-      image: "https://images.unsplash.com/photo-1683587050025-d541ed663302?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img11.jpeg",
+      afterImage: "/assets/img12.jpeg",
       title: "Athletic Performance",
-      description: "12 weeks performance training",
+      description: "Conditioning and body composition improved together",
     },
     {
-      image: "https://images.unsplash.com/photo-1583500178048-f5c4013b4ab9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxmaXRuZXNzJTIwdHJhbnNmb3JtYXRpb24lMjBiZWZvcmUlMjBhZnRlcnxlbnwxfHx8fDE3Nzg4Mzc4Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      beforeImage: "/assets/img13.jpeg",
+      afterImage: "/assets/img14.jpeg",
       title: "Complete Transformation",
-      description: "6 months journey to fitness",
+      description: "Full transformation through training, nutrition, and accountability",
+    },
+    {
+      beforeImage: "/assets/img15.jpeg",
+      afterImage: "/assets/img16.jpeg",
+      title: "Fat Loss Progress",
+      description: "Sharper condition from a focused fat loss phase",
+    },
+    {
+      beforeImage: "/assets/img17.jpeg",
+      afterImage: "/assets/img18.jpeg",
+      title: "Lean Muscle Progress",
+      description: "Improved size, posture, and overall shape",
+    },
+    {
+      beforeImage: "/assets/img19.jpeg",
+      afterImage: "/assets/img20.jpeg",
+      title: "Physique Upgrade",
+      description: "Clear before and after body composition change",
+    },
+    {
+      beforeImage: "/assets/img21.jpeg",
+      afterImage: "/assets/img22.jpeg",
+      title: "Transformation Journey",
+      description: "Step-by-step progress through structured coaching",
+    },
+    {
+      beforeImage: "/assets/img23.jpeg",
+      afterImage: "/assets/img24.jpeg",
+      title: "Client Result",
+      description: "Before and after progress with measurable consistency",
     },
   ];
 
@@ -51,7 +87,7 @@ export function GalleryPage() {
 
   const showPreviousTransformation = () => {
     setActiveTransformation((current) =>
-      current === 0 ? transformations.length - 1 : current - 1,
+                  current === 0 ? transformations.length - 1 : current - 1,
     );
   };
 
@@ -106,27 +142,50 @@ export function GalleryPage() {
           </div>
 
           <div className="relative w-full overflow-hidden rounded-xl border border-white/10 bg-black/45 p-3 shadow-2xl shadow-black/40 backdrop-blur md:p-4">
-            <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[1.7fr_0.6fr]">
-              <div
-                className="group relative min-h-[360px] cursor-pointer overflow-hidden rounded-lg bg-white/5 sm:min-h-[440px] lg:min-h-[520px]"
-                onClick={() => setSelectedImage(activeItem.image)}
-              >
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={activeItem.image}
-                    src={activeItem.image}
-                    alt={activeItem.title}
-                    initial={{ opacity: 0, scale: 1.04 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                </AnimatePresence>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-                <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+            <div className="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-[0.95fr_0.7fr]">
+              <div className="relative">
+                <div className="absolute left-4 top-4 z-20 rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
                   {String(activeTransformation + 1).padStart(2, "0")} / {String(transformations.length).padStart(2, "0")}
                 </div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeItem.title}
+                    initial={{ opacity: 0, scale: 0.985 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.985 }}
+                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    className="grid grid-cols-1 gap-3 md:grid-cols-2"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImage(activeItem.beforeImage)}
+                      className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-white/10 bg-black"
+                    >
+                      <img
+                        src={activeItem.beforeImage}
+                        alt={`${activeItem.title} before`}
+                        className="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                      <span className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-black/70 px-4 py-2 text-xs font-bold uppercase tracking-normal text-white backdrop-blur">
+                        Before
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedImage(activeItem.afterImage)}
+                      className="group relative aspect-[3/4] overflow-hidden rounded-lg border border-primary/30 bg-black"
+                    >
+                      <img
+                        src={activeItem.afterImage}
+                        alt={`${activeItem.title} after`}
+                        className="h-full w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                      />
+                      <span className="absolute bottom-4 right-4 rounded-full border border-primary/30 bg-primary px-4 py-2 text-xs font-bold uppercase tracking-normal text-white shadow-lg shadow-primary/25">
+                        After
+                      </span>
+                    </button>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
               <div className="flex flex-col justify-between rounded-lg border border-white/10 bg-white/[0.06] p-4 lg:p-5">
@@ -171,7 +230,9 @@ export function GalleryPage() {
                       <button
                         key={item.title}
                         type="button"
-                        onClick={() => setActiveTransformation(index)}
+                        onClick={() => {
+                          setActiveTransformation(index);
+                        }}
                         className={`h-2 rounded-full transition-all ${
                           activeTransformation === index ? "w-10 bg-primary" : "w-2 bg-white/25 hover:bg-white/50"
                         }`}
@@ -188,7 +249,9 @@ export function GalleryPage() {
                 <button
                   key={item.title}
                   type="button"
-                  onClick={() => setActiveTransformation(index)}
+                  onClick={() => {
+                    setActiveTransformation(index);
+                  }}
                   className={`group relative h-20 overflow-hidden rounded-lg border transition-all sm:h-24 lg:h-24 ${
                     activeTransformation === index
                       ? "border-primary shadow-lg shadow-primary/20"
@@ -196,9 +259,9 @@ export function GalleryPage() {
                   }`}
                 >
                   <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    src={item.afterImage}
+                    alt={`${item.title} after`}
+                    className="h-full w-full bg-black object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/25" />
                 </button>

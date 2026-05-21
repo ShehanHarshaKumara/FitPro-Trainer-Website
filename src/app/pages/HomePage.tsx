@@ -1,8 +1,45 @@
 import { Link } from "react-router";
-import { Dumbbell, Target, Award, Users } from "lucide-react";
+import {
+  Award,
+  BarChart3,
+  CalendarCheck,
+  CheckCircle2,
+  Dumbbell,
+  Flame,
+  MessageCircle,
+  NotebookTabs,
+  ShieldCheck,
+  Target,
+  Users,
+} from "lucide-react";
 import { motion } from "motion/react";
 
 export function HomePage() {
+  const coachingSteps = [
+    {
+      icon: Target,
+      title: "Goal Audit",
+      description: "We map your current training, nutrition, schedule, and transformation target before building the plan.",
+    },
+    {
+      icon: NotebookTabs,
+      title: "Custom System",
+      description: "You get structured workouts, practical nutrition guidance, and weekly priorities that fit real life.",
+    },
+    {
+      icon: BarChart3,
+      title: "Progress Reviews",
+      description: "Check-ins keep training load, food strategy, recovery, and consistency moving in the right direction.",
+    },
+  ];
+
+  const outcomes = [
+    "Fat loss without guesswork",
+    "Muscle growth with progressive overload",
+    "Technique feedback and safer form",
+    "Nutrition that fits your lifestyle",
+  ];
+
   return (
     <div className="min-h-screen">
       <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-black">
@@ -17,7 +54,7 @@ export function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.06),transparent_34%)]" />
         </div>
 
-        <div className="relative z-10 grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+        <div className="relative z-30 grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-8 px-4 py-16 sm:gap-12 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +65,7 @@ export function HomePage() {
               Manula D Fitness Coaching
             </div>
             <h1 className="mb-6 max-w-4xl text-5xl font-black uppercase leading-none tracking-normal text-white drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl">
-              Transform
+              Transform{" "}
               <span className="block text-primary">
                 Your Body
               </span>
@@ -56,14 +93,14 @@ export function HomePage() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative mx-auto h-[480px] w-full max-w-md -translate-y-4 sm:h-[580px] sm:max-w-lg md:h-[680px] md:max-w-xl lg:h-[830px] lg:max-w-none lg:-translate-y-12"
+            className="relative z-30 mx-auto h-[680px] w-full max-w-md translate-y-16 sm:h-[560px] sm:max-w-lg sm:translate-y-0 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[840px]"
           >
-            <div className="absolute -inset-8 bg-primary/15 blur-3xl" />
-            <div className="relative h-full overflow-visible">
+            <div className="absolute inset-x-10 bottom-6 top-16 bg-primary/12 blur-3xl" />
+            <div className="relative flex h-full items-end justify-center overflow-visible">
               <img
-                src="/assets/hero-trainer.png"
+                src="/assets/img2.png"
                 alt="Personal trainer workout"
-                className="mx-auto h-full w-auto max-w-full object-contain drop-shadow-2xl lg:ml-auto lg:max-w-none"
+                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl"
               />
             </div>
           </motion.div>
@@ -81,7 +118,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-black to-zinc-950">
+      <section className="bg-gradient-to-b from-black to-zinc-950 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
@@ -96,7 +133,7 @@ export function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-white/5 rounded-xl border border-white/10 hover:border-primary/50 transition-all group"
+                className="text-center p-8 bg-white/5 rounded-lg border border-white/10 hover:border-primary/50 transition-all group"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-4 group-hover:scale-110 transition-transform">
                   <stat.icon className="w-8 h-8 text-primary" />
@@ -106,6 +143,58 @@ export function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="theme-section-red py-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-b from-white/[0.08] via-black/10 to-black/40"
+          >
+            <div className="absolute inset-x-8 bottom-8 top-16 bg-primary/15 blur-3xl" aria-hidden="true" />
+            <img
+              src="/assets/hero-trainer.png"
+              alt="Manula D personal training"
+              className="relative z-10 h-[560px] w-full scale-110 object-contain object-bottom drop-shadow-2xl sm:h-[620px] lg:h-[660px]"
+            />
+            <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-sm font-semibold text-white backdrop-blur">
+                <ShieldCheck className="h-4 w-4 text-primary" />
+                Evidence-based coaching
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.55 }}
+            viewport={{ once: true }}
+          >
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold uppercase tracking-normal text-primary">
+              <Flame className="h-4 w-4" />
+              Updated Coaching System
+            </div>
+            <h2 className="mb-5 text-4xl md:text-5xl">
+              Training, nutrition, and accountability in one <span className="text-primary">clear plan</span>
+            </h2>
+            <p className="mb-8 max-w-2xl text-lg leading-8 text-white/70">
+              The coaching flow is designed to remove confusion: know what to train, how to eat, what to track, and when to adjust so progress stays measurable.
+            </p>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {outcomes.map((outcome) => (
+                <div key={outcome} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.055] p-4">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-white/82">{outcome}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -158,18 +247,64 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl mb-6">Ready to Start Your <span className="text-primary">Journey</span>?</h2>
-          <p className="text-white/60 text-xl mb-8">
-            Start with structured coaching that removes confusion and helps you build powerful natural results.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block px-10 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg transition-all transform hover:scale-105"
-          >
-            Get Started Today
-          </Link>
+      <section className="theme-section-orange py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-14 text-center">
+            <h2 className="mb-4 text-4xl md:text-5xl">How Coaching <span className="text-primary">Works</span></h2>
+            <p className="mx-auto max-w-2xl text-xl text-white/60">A simple process built for consistency, not confusion.</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {coachingSteps.map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.055] p-7"
+              >
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/20">
+                    <step.icon className="h-7 w-7" />
+                  </div>
+                  <span className="text-5xl font-black text-white/10">0{index + 1}</span>
+                </div>
+                <h3 className="mb-3 text-2xl">{step.title}</h3>
+                <p className="leading-7 text-white/65">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black py-20">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 px-4 sm:px-6 md:grid-cols-[1fr_auto] lg:px-8">
+          <div>
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white/75">
+              <CalendarCheck className="h-4 w-4 text-primary" />
+              Free consultation available
+            </div>
+            <h2 className="text-4xl md:text-5xl">Ready to start your <span className="text-primary">journey</span>?</h2>
+            <p className="mt-4 max-w-2xl text-xl leading-8 text-white/60">
+              Share your goal, current routine, and biggest challenge. Manula D will help you choose the right coaching path.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-primary/90"
+            >
+              Send Message
+              <MessageCircle className="h-5 w-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/12"
+            >
+              Compare Plans
+            </Link>
+          </div>
         </div>
       </section>
     </div>

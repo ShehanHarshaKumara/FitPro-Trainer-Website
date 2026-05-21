@@ -95,11 +95,13 @@ export function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="relative aspect-[1091/1441] overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-black/40"
             >
+              <div className="absolute inset-x-8 bottom-8 top-20 bg-primary/15 blur-3xl" aria-hidden="true" />
               <img
-                src="https://images.unsplash.com/photo-1604480133435-25b86862d276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/img1.png"
                 alt="Trainer"
-                className="rounded-xl w-full h-[600px] object-cover"
+                className="relative z-10 h-full w-full object-cover object-center drop-shadow-2xl"
               />
             </motion.div>
 
