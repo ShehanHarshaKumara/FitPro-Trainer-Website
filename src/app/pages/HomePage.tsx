@@ -48,10 +48,11 @@ export function HomePage() {
             src="/assets/hero-background.jpg"
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-cover opacity-65"
+            className="h-full w-full object-cover opacity-75"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.06),transparent_34%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/62 to-black/38" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_46%,rgba(239,68,68,0.18),transparent_34%),radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.06),transparent_34%)]" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/50 to-transparent" />
         </div>
 
         <div className="relative z-30 grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-8 px-4 py-16 sm:gap-12 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
@@ -93,14 +94,15 @@ export function HomePage() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative z-30 mx-auto h-[680px] w-full max-w-md translate-y-16 sm:h-[560px] sm:max-w-lg sm:translate-y-0 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[840px]"
+            className="relative z-30 mx-auto h-[680px] w-full max-w-md translate-y-16 sm:h-[560px] sm:max-w-lg sm:translate-y-0 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[820px]"
           >
-            <div className="absolute inset-x-10 bottom-6 top-16 bg-primary/12 blur-3xl" />
+            <div className="absolute inset-x-4 bottom-0 top-20 bg-[radial-gradient(circle_at_50%_58%,rgba(239,68,68,0.18),transparent_58%)] blur-2xl" />
+            <div className="absolute inset-x-12 bottom-0 h-28 bg-black/55 blur-2xl" />
             <div className="relative flex h-full items-end justify-center overflow-visible">
               <img
-                src="/assets/img25.png"
+                src="/assets/img26.png"
                 alt="Personal trainer workout"
-                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl"
+                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.65)]"
               />
             </div>
           </motion.div>
