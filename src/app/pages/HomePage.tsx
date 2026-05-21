@@ -98,7 +98,7 @@ export function HomePage() {
             <div className="absolute inset-x-10 bottom-6 top-16 bg-primary/12 blur-3xl" />
             <div className="relative flex h-full items-end justify-center overflow-visible">
               <img
-                src="/assets/img2.png"
+                src="/assets/img25.png"
                 alt="Personal trainer workout"
                 className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-2xl"
               />
