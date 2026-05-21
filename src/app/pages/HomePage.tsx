@@ -55,12 +55,29 @@ export function HomePage() {
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/50 to-transparent" />
         </div>
 
-        <div className="relative z-30 grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-8 px-4 py-16 sm:gap-12 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
+        <div className="relative z-30 grid w-full max-w-7xl mx-auto grid-cols-1 items-center gap-8 px-4 py-16 sm:gap-12 sm:px-6 lg:grid-cols-[0.95fr_1fr] lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="relative z-30 order-2 mx-auto h-[680px] w-full max-w-md translate-y-16 sm:h-[560px] sm:max-w-lg sm:translate-y-0 lg:order-1 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[820px]"
+          >
+            <div className="absolute inset-x-4 bottom-0 top-20 bg-[radial-gradient(circle_at_50%_58%,rgba(239,68,68,0.18),transparent_58%)] blur-2xl" />
+            <div className="absolute inset-x-12 bottom-0 h-28 bg-black/55 blur-2xl" />
+            <div className="relative flex h-full items-end justify-center overflow-visible">
+              <img
+                src="/assets/img26.png"
+                alt="Personal trainer workout"
+                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.65)]"
+              />
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl text-left"
+            className="order-1 max-w-3xl text-left lg:order-2 lg:ml-auto"
           >
             <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/80 backdrop-blur md:text-sm">
               Manula D Fitness Coaching
@@ -90,22 +107,6 @@ export function HomePage() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative z-30 mx-auto h-[680px] w-full max-w-md translate-y-16 sm:h-[560px] sm:max-w-lg sm:translate-y-0 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[820px]"
-          >
-            <div className="absolute inset-x-4 bottom-0 top-20 bg-[radial-gradient(circle_at_50%_58%,rgba(239,68,68,0.18),transparent_58%)] blur-2xl" />
-            <div className="absolute inset-x-12 bottom-0 h-28 bg-black/55 blur-2xl" />
-            <div className="relative flex h-full items-end justify-center overflow-visible">
-              <img
-                src="/assets/img26.png"
-                alt="Personal trainer workout"
-                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.65)]"
-              />
-            </div>
-          </motion.div>
         </div>
 
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-36 sm:h-44 lg:h-56" aria-hidden="true">
