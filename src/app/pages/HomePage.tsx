@@ -60,15 +60,15 @@ export function HomePage() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative z-30 order-2 mx-auto h-[760px] w-[118%] max-w-none translate-y-16 sm:h-[560px] sm:w-full sm:max-w-lg sm:translate-y-0 lg:order-1 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[820px]"
+            className="relative z-30 order-2 mx-auto h-[640px] w-full max-w-[430px] translate-y-10 sm:h-[560px] sm:max-w-lg sm:translate-y-0 lg:order-1 md:h-[710px] md:max-w-xl lg:h-[740px] lg:max-w-2xl xl:h-[820px]"
           >
             <div className="absolute inset-x-4 bottom-0 top-20 bg-[radial-gradient(circle_at_50%_58%,rgba(239,68,68,0.18),transparent_58%)] blur-2xl" />
             <div className="absolute inset-x-12 bottom-0 h-28 bg-black/55 blur-2xl" />
             <div className="relative flex h-full items-end justify-center overflow-visible">
               <img
-                src="/assets/img26.png"
+                src="/assets/img28.png"
                 alt="Personal trainer workout"
-                className="h-full max-h-full w-auto max-w-none object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.65)]"
+                className="h-full max-h-full w-auto max-w-[125%] object-contain object-bottom drop-shadow-[0_28px_55px_rgba(0,0,0,0.65)] sm:max-w-none"
               />
             </div>
           </motion.div>
