@@ -99,7 +99,7 @@ export function AboutPage() {
             >
               <div className="absolute inset-x-8 bottom-8 top-20 bg-primary/15 blur-3xl" aria-hidden="true" />
               <img
-                src="/assets/img1.png"
+                src="/assets/img27.jpeg"
                 alt="Trainer"
                 className="relative z-10 h-full w-full object-cover object-center drop-shadow-2xl"
               />
