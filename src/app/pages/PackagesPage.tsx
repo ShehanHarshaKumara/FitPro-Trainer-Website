@@ -9,7 +9,7 @@ export function PackagesPage() {
       icon: TrendingUp,
       title: "LEGACY",
       duration: "12-Month Transformation Journey",
-      level: "Rs. 180,500",
+      level: "Rs. 165,500",
       description: "Designed for individuals who want more than a short-term transformation. This premium coaching experience provides year-round guidance, accountability, and support to help you build a stronger physique and sustainable lifestyle.",
       features: [
         "Fully personalized nutrition plan with ongoing updates",
