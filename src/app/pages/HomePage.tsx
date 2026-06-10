@@ -8,7 +8,6 @@ import {
   Flame,
   MessageCircle,
   NotebookTabs,
-  ShieldCheck,
   Target,
   Users,
 } from "lucide-react";
@@ -150,49 +149,29 @@ export function HomePage() {
       </section>
 
       <section className="theme-section-red py-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-b from-white/[0.08] via-black/10 to-black/40"
-          >
-            <div className="absolute inset-x-8 bottom-8 top-16 bg-primary/15 blur-3xl" aria-hidden="true" />
-            <img
-              src="/assets/hero-trainer.png"
-              alt="Manula D personal training"
-              className="relative z-10 h-[560px] w-full scale-110 object-contain object-bottom drop-shadow-2xl sm:h-[620px] lg:h-[660px]"
-            />
-            <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-sm font-semibold text-white backdrop-blur">
-                <ShieldCheck className="h-4 w-4 text-primary" />
-                Evidence-based coaching
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.55 }}
-            viewport={{ once: true }}
+            className="text-center"
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-semibold uppercase tracking-normal text-primary">
               <Flame className="h-4 w-4" />
               Updated Coaching System
             </div>
-            <h2 className="mb-5 text-4xl md:text-5xl">
+            <h2 className="mx-auto mb-5 max-w-4xl text-4xl md:text-5xl">
               Training, nutrition, and accountability in one <span className="text-primary">clear plan</span>
             </h2>
-            <p className="mb-8 max-w-2xl text-lg leading-8 text-white/70">
+            <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-white/70">
               The coaching flow is designed to remove confusion: know what to train, how to eat, what to track, and when to adjust so progress stays measurable.
             </p>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {outcomes.map((outcome) => (
-                <div key={outcome} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.055] p-4">
-                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
+                <div key={outcome} className="flex min-h-32 flex-col justify-between rounded-lg border border-white/10 bg-white/[0.065] p-5 text-left transition-all hover:border-primary/45 hover:bg-white/[0.09]">
+                  <CheckCircle2 className="mb-4 h-6 w-6 flex-shrink-0 text-primary" />
                   <span className="text-white/82">{outcome}</span>
                 </div>
               ))}
