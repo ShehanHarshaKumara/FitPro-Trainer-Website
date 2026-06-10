@@ -173,14 +173,14 @@ export function TestimonialsPage() {
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8Z3ltJTIwdHJhaW5lciUyMGZpdG5lc3MlMjB3b3Jrb3V0fGVufDF8fHx8MTc3ODgzNzg3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Testimonials"
+            alt="Feedback"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl mb-4">Client <span className="text-primary">Testimonials</span></h1>
-          <p className="text-xl text-white/80">Success stories from satisfied clients</p>
+          <h1 className="text-5xl md:text-6xl mb-4">Client <span className="text-primary">Feedback</span></h1>
+          <p className="text-xl text-white/80">Reviews and success stories from satisfied clients</p>
         </div>
       </section>
 
@@ -196,7 +196,7 @@ export function TestimonialsPage() {
             >
               <h2 className="text-4xl mb-4">Share Your <span className="text-primary">Feedback</span></h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                Visitors and clients can add their experience here. Submitted feedback is saved to the testimonials database and stays available after refresh.
+                Visitors and clients can add their experience here. Submitted feedback is saved to the feedback database and stays available after refresh.
               </p>
             </motion.div>
 

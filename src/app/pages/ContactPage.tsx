@@ -312,8 +312,8 @@ export function ContactPage() {
     {
       icon: InstagramBrandIcon,
       label: "Instagram",
-      value: "@_manu_.d12",
-      link: "https://www.instagram.com/_manu_.d12?igsh=ejMyczR5ZTAzMDkz&utm_source=qr",
+      value: "@_manula_d",
+      link: "https://www.instagram.com/_manula_d?igsh=ejMyczR5ZTAzMDkz&utm_source=qr",
     },
     {
       icon: TikTokBrandIcon,

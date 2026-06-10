@@ -13,7 +13,7 @@ export function Navigation() {
     { path: "/services", label: "Services" },
     { path: "/packages", label: "Packages" },
     { path: "/gallery", label: "Gallery" },
-    { path: "/testimonials", label: "Testimonials" },
+    { path: "/feedback", label: "Feedback" },
     { path: "/contact", label: "Contact" },
   ];
 

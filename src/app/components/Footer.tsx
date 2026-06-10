@@ -20,7 +20,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/_manu_.d12?igsh=ejMyczR5ZTAzMDkz&utm_source=qr"
+                href="https://www.instagram.com/_manula_d?igsh=ejMyczR5ZTAzMDkz&utm_source=qr"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -53,7 +53,7 @@ export function Footer() {
             <h3 className="mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/gallery" className="text-white/60 hover:text-primary transition-colors">Gallery</Link></li>
-              <li><Link to="/testimonials" className="text-white/60 hover:text-primary transition-colors">Testimonials</Link></li>
+              <li><Link to="/feedback" className="text-white/60 hover:text-primary transition-colors">Feedback</Link></li>
               <li><Link to="/contact" className="text-white/60 hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/60">
                 <Instagram className="w-4 h-4 text-primary" />
-                <span>@_manu_.d12</span>
+                <span>@_manula_d</span>
               </li>
             </ul>
           </div>
