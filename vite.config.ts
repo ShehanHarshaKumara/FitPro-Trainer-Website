@@ -17,6 +17,11 @@ function figmaAssetResolver() {
 
 export default defineConfig({
   plugins: [figmaAssetResolver(), react(), tailwindcss()],
+  server: {
+    proxy: {
+      "/api": "http://localhost:5180",
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

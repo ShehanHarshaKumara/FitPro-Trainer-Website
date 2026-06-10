@@ -46,10 +46,15 @@ export function ServicesPage() {
       image: "https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
     },
     {
-      icon: Monitor,
-      title: "Progress Tracking & Accountability",
-      description: "Regular assessments, plan updates, and continuous support to keep your transformation moving forward.",
-      features: ["Assessments", "Plan updates", "Check-ins", "Accountability support"],
+      icon: Dumbbell,
+      title: "Personalized Workout Plans",
+      description: "Practical training programs tailored to your fitness level, schedule, recovery capacity, and transformation goal.",
+      features: [
+        "Customized workout programming",
+        "Progressive overload guidance",
+        "Exercise technique coaching",
+        "Lifestyle & habit support",
+      ],
       image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
     },
   ];

@@ -99,10 +99,10 @@ export function HomePage() {
                 Book Training
               </Link>
               <Link
-                to="/programs"
+                to="/packages"
                 className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-8 py-4 font-medium text-white backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white/20"
               >
-                View Programs
+                View Packages
               </Link>
             </div>
           </motion.div>
@@ -300,12 +300,6 @@ export function HomePage() {
             >
               Send Message
               <MessageCircle className="h-5 w-5" />
-            </Link>
-            <Link
-              to="/pricing"
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/12"
-            >
-              Compare Plans
             </Link>
           </div>
         </div>

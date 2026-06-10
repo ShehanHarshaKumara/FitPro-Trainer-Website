@@ -1,7 +1,56 @@
-import { Send, MessageCircle } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2, Send, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router";
 import Swal from "sweetalert2";
+
+const WEB3FORMS_ACCESS_KEY = "0053cd8d-001b-4d9b-b58a-0753464d7b6c";
+const CONTACT_EMAIL = "manuladamith@gmail.com";
+
+const packageOptions = [
+  {
+    id: "legacy",
+    title: "LEGACY",
+    duration: "12-Month Transformation Journey",
+    price: "Rs. 148,500",
+    description: "Designed for individuals who want more than a short-term transformation. This premium coaching experience provides year-round guidance, accountability, and support to help you build a stronger physique and sustainable lifestyle.",
+  },
+  {
+    id: "foundation",
+    title: "FOUNDATION",
+    duration: "3-Month Coaching Program",
+    price: "Rs. 81,500",
+    description: "A results-driven coaching experience designed to help you build momentum, establish consistency, and create measurable progress through personalized training and nutrition guidance.",
+  },
+  {
+    id: "elevate",
+    title: "ELEVATE",
+    duration: "6-Month Coaching Program",
+    price: "Rs. 98,500",
+    description: "Created for individuals who are serious about maximizing their results through a structured and sustainable approach.",
+  },
+  {
+    id: "elite-monthly",
+    title: "ELITE MONTHLY",
+    duration: "Monthly Coaching Membership",
+    price: "Rs. 33,500",
+    description: "A high-support coaching experience designed for individuals who value regular guidance and accountability.",
+  },
+  {
+    id: "nutrition-blueprint",
+    title: "NUTRITION BLUEPRINT",
+    duration: "One-Time Plan",
+    price: "Rs. 22,500",
+    description: "A personalized nutrition plan built around your lifestyle, food preferences, and body composition goals.",
+  },
+  {
+    id: "training-blueprint",
+    title: "TRAINING BLUEPRINT",
+    duration: "One-Time Workout Plan",
+    price: "Rs. 22,500",
+    description: "A fully customized workout program designed specifically for your fitness level, training experience, available equipment, and physique goals.",
+  },
+];
 
 function PhoneBrandIcon({ className }: { className?: string }) {
   return (
@@ -100,45 +149,151 @@ function TikTokBrandIcon({ className }: { className?: string }) {
 }
 
 export function ContactPage() {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [selectedPackageId, setSelectedPackageId] = useState(searchParams.get("package") || "");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const selectedPackage = useMemo(
+    () => packageOptions.find((packageItem) => packageItem.id === selectedPackageId),
+    [selectedPackageId],
+  );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    const packageId = searchParams.get("package") || "";
+    setSelectedPackageId(packageId);
+  }, [searchParams]);
+
+  useEffect(() => {
+    if (!selectedPackage) {
+      return;
+    }
+
+    setFormData((currentFormData) => {
+      if (currentFormData.message.trim()) {
+        return currentFormData;
+      }
+
+      return {
+        ...currentFormData,
+        message: `I am interested in the ${selectedPackage.title} package. Please send me more details.`,
+      };
+    });
+  }, [selectedPackage]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`Fitness coaching enquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${formData.name}`,
-        `Email: ${formData.email}`,
-        `Phone: ${formData.phone || "Not provided"}`,
+    const trimmedName = formData.name.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedPhone = formData.phone.trim();
+    const trimmedMessage = formData.message.trim();
+    const packageText = selectedPackage
+      ? [
+          `Selected Package: ${selectedPackage.title}`,
+          `Package Type: ${selectedPackage.duration}`,
+          `Price: ${selectedPackage.price}`,
+          `Details: ${selectedPackage.description}`,
+        ]
+      : ["Selected Package: Not selected"];
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+      setStatus("error");
+      setErrorMessage("Please add your name, email, and message before sending.");
+      return;
+    }
+
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const messageBody = [
+        `Name: ${trimmedName}`,
+        `Email: ${trimmedEmail}`,
+        `Phone: ${trimmedPhone || "Not provided"}`,
+        ...packageText,
         "",
         "Message:",
-        formData.message,
-      ].join("\n"),
-    );
+        trimmedMessage,
+      ].join("\n");
+      const web3FormsData = new FormData();
 
-    window.location.href = `mailto:manuladamith@gmail.com?subject=${subject}&body=${body}`;
+      web3FormsData.append("access_key", WEB3FORMS_ACCESS_KEY);
+      web3FormsData.append("name", trimmedName);
+      web3FormsData.append("email", trimmedEmail);
+      web3FormsData.append("phone", trimmedPhone || "Not provided");
+      web3FormsData.append(
+        "subject",
+        selectedPackage
+          ? `[FitPro Contact] ${selectedPackage.title} enquiry from ${trimmedName}`
+          : `[FitPro Contact] Fitness coaching enquiry from ${trimmedName}`,
+      );
+      web3FormsData.append("selected_package", selectedPackage?.title || "Not selected");
+      web3FormsData.append("package_price", selectedPackage?.price || "Not selected");
+      web3FormsData.append("message", messageBody);
+      web3FormsData.append("botcheck", "");
 
-    Swal.fire({
-      title: "Message Ready",
-      text: "Your email app should open with the message prepared for manuladamith@gmail.com.",
-      icon: "success",
-      confirmButtonText: "OK",
-      confirmButtonColor: "#ef4444",
-      background: "#111111",
-      color: "#ffffff",
-    });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: web3FormsData,
+      });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Could not send message.");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setSelectedPackageId("");
+
+      Swal.fire({
+        title: "Message Sent",
+        text: `Your message was sent successfully to ${CONTACT_EMAIL}.`,
+        icon: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#ef4444",
+        background: "#111111",
+        color: "#ffffff",
+      });
+
+      window.setTimeout(() => setStatus("idle"), 6000);
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please check your connection and try again.",
+      );
+      window.setTimeout(() => setStatus("idle"), 6000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const packageId = e.target.value;
+    const packageItem = packageOptions.find((item) => item.id === packageId);
+
+    setSelectedPackageId(packageId);
+
+    if (packageItem) {
+      setFormData((currentFormData) => ({
+        ...currentFormData,
+        message:
+          currentFormData.message.trim() && !currentFormData.message.startsWith("I am interested in the")
+            ? currentFormData.message
+            : `I am interested in the ${packageItem.title} package. Please send me more details.`,
+      }));
+    }
   };
 
   const contactInfo = [
@@ -151,8 +306,8 @@ export function ContactPage() {
     {
       icon: GoogleMailIcon,
       label: "Email",
-      value: "manuladamith@gmail.com",
-      link: "mailto:manuladamith@gmail.com",
+      value: CONTACT_EMAIL,
+      link: `mailto:${CONTACT_EMAIL}`,
     },
     {
       icon: InstagramBrandIcon,
@@ -287,6 +442,41 @@ export function ContactPage() {
                   </div>
 
                   <div>
+                    <label htmlFor="selected-package" className="block mb-2 text-white/80">
+                      Selected Package
+                    </label>
+                    <select
+                      id="selected-package"
+                      value={selectedPackageId}
+                      onChange={handlePackageChange}
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                    >
+                      <option value="" className="bg-black">Choose a package</option>
+                      {packageOptions.map((packageItem) => (
+                        <option key={packageItem.id} value={packageItem.id} className="bg-black">
+                          {packageItem.title} - {packageItem.price}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {selectedPackage && (
+                    <div className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 p-5">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <p className="text-sm uppercase tracking-wide text-emerald-200/80">Package Selected</p>
+                          <h4 className="mt-1 text-2xl text-white">{selectedPackage.title}</h4>
+                          <p className="mt-1 text-white/70">{selectedPackage.duration}</p>
+                        </div>
+                        <div className="rounded-lg border border-emerald-300/50 bg-emerald-500 px-4 py-2 font-semibold text-white shadow-lg shadow-emerald-500/20">
+                          {selectedPackage.price}
+                        </div>
+                      </div>
+                      <p className="mt-4 text-sm leading-6 text-white/75">{selectedPackage.description}</p>
+                    </div>
+                  )}
+
+                  <div>
                     <label htmlFor="message" className="block mb-2 text-white/80">
                       Your Message *
                     </label>
@@ -304,11 +494,39 @@ export function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-primary hover:bg-primary/90 rounded-lg transition-all flex items-center justify-center gap-2 group"
+                    disabled={status === "sending"}
+                    className="w-full px-6 py-4 bg-primary hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70 rounded-lg transition-all flex items-center justify-center gap-2 group"
                   >
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    <span>Send Message</span>
+                    {status === "sending" ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <span>Sending...</span>
+                      </>
+                    ) : status === "success" ? (
+                      <>
+                        <CheckCircle2 className="w-5 h-5" />
+                        <span>Message Sent!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <span>Send Message</span>
+                      </>
+                    )}
                   </button>
+
+                  {status === "success" && (
+                    <p className="rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200">
+                      Thanks. Your message was sent successfully.
+                    </p>
+                  )}
+
+                  {status === "error" && errorMessage && (
+                    <p className="flex items-center gap-2 rounded-lg border border-red-400/30 bg-red-400/10 px-4 py-3 text-sm text-red-200">
+                      <AlertCircle className="h-4 w-4 flex-shrink-0" />
+                      {errorMessage}
+                    </p>
+                  )}
                 </div>
               </form>
             </motion.div>

@@ -3,10 +3,9 @@ import { RootLayout } from "./components/RootLayout";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ServicesPage } from "./pages/ServicesPage";
-import { ProgramsPage } from "./pages/ProgramsPage";
+import { PackagesPage } from "./pages/PackagesPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { TestimonialsPage } from "./pages/TestimonialsPage";
-import { PricingPage } from "./pages/PricingPage";
 import { ContactPage } from "./pages/ContactPage";
 
 export const router = createBrowserRouter([
@@ -17,10 +16,9 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: "about", Component: AboutPage },
       { path: "services", Component: ServicesPage },
-      { path: "programs", Component: ProgramsPage },
+      { path: "packages", Component: PackagesPage },
       { path: "gallery", Component: GalleryPage },
       { path: "testimonials", Component: TestimonialsPage },
-      { path: "pricing", Component: PricingPage },
       { path: "contact", Component: ContactPage },
     ],
   },

@@ -13,67 +13,65 @@ type Testimonial = {
   createdAt?: string;
 };
 
-const LOCAL_FEEDBACK_KEY = "manula-d-client-feedback-v3";
+const sampleTestimonials: Testimonial[] = [
+  {
+    id: "sample-1",
+    name: "Sarah Johnson",
+    role: "Weight Loss Client",
+    image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "Manula's personalized meal plan and training structure helped me stay consistent, understand my body better, and make real progress with fat loss.",
+    result: "Lost 30 lbs in 3 months",
+  },
+  {
+    id: "sample-2",
+    name: "Michael Chen",
+    role: "Muscle Building Client",
+    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "The muscle building program was clear, progressive, and easy to follow. The technique feedback and overload plan made every workout feel purposeful.",
+    result: "Gained 15 lbs of muscle",
+  },
+  {
+    id: "sample-3",
+    name: "Emily Rodriguez",
+    role: "Beginner Client",
+    image: "https://images.unsplash.com/photo-1596357395217-80de13130e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "As a complete beginner, I was intimidated by the gym. Manula made everything easy to understand and helped me build confidence with proper form.",
+    result: "Went from zero to hero",
+  },
+  {
+    id: "sample-4",
+    name: "David Thompson",
+    role: "Online Coaching Client",
+    image: "https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "The online coaching program exceeded my expectations. Even remotely, the guidance, accountability, and weekly adjustments kept me on track.",
+    result: "Lost 20 lbs remotely",
+  },
+  {
+    id: "sample-5",
+    name: "Jessica Martinez",
+    role: "Transformation Client",
+    image: "https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "The customized program worked around my schedule and made nutrition feel practical. I finally had a realistic system I could follow.",
+    result: "Complete body transformation",
+  },
+  {
+    id: "sample-6",
+    name: "Robert Anderson",
+    role: "Strength Training Client",
+    image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    rating: 5,
+    text: "The strength and performance program helped me improve my compound lifts with better technique, smarter progression, and clear weekly targets.",
+    result: "Competition ready in 12 weeks",
+  },
+];
 
 export function TestimonialsPage() {
-  const testimonials: Testimonial[] = [
-    {
-      id: "sample-1",
-      name: "Sarah Johnson",
-      role: "Weight Loss Client",
-      image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "Manula's personalized meal plan and training structure helped me stay consistent, understand my body better, and make real progress with fat loss.",
-      result: "Lost 30 lbs in 3 months",
-    },
-    {
-      id: "sample-2",
-      name: "Michael Chen",
-      role: "Muscle Building Client",
-      image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "The muscle building program was clear, progressive, and easy to follow. The technique feedback and overload plan made every workout feel purposeful.",
-      result: "Gained 15 lbs of muscle",
-    },
-    {
-      id: "sample-3",
-      name: "Emily Rodriguez",
-      role: "Beginner Client",
-      image: "https://images.unsplash.com/photo-1596357395217-80de13130e92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw4fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "As a complete beginner, I was intimidated by the gym. Manula made everything easy to understand and helped me build confidence with proper form.",
-      result: "Went from zero to hero",
-    },
-    {
-      id: "sample-4",
-      name: "David Thompson",
-      role: "Online Coaching Client",
-      image: "https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "The online coaching program exceeded my expectations. Even remotely, the guidance, accountability, and weekly adjustments kept me on track.",
-      result: "Lost 20 lbs remotely",
-    },
-    {
-      id: "sample-5",
-      name: "Jessica Martinez",
-      role: "Transformation Client",
-      image: "https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "The customized program worked around my schedule and made nutrition feel practical. I finally had a realistic system I could follow.",
-      result: "Complete body transformation",
-    },
-    {
-      id: "sample-6",
-      name: "Robert Anderson",
-      role: "Strength Training Client",
-      image: "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxneW0lMjB0cmFpbmVyJTIwZml0bmVzcyUyMHdvcmtvdXR8ZW58MXx8fHwxNzc4ODM3ODc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      rating: 5,
-      text: "The strength and performance program helped me improve my compound lifts with better technique, smarter progression, and clear weekly targets.",
-      result: "Competition ready in 12 weeks",
-    },
-  ];
-
-  const [savedFeedback, setSavedFeedback] = useState<Testimonial[]>([]);
+  const [databaseFeedback, setDatabaseFeedback] = useState<Testimonial[]>([]);
   const [formData, setFormData] = useState({
     name: "",
     role: "",
@@ -82,29 +80,44 @@ export function TestimonialsPage() {
     result: "",
   });
   const [statusMessage, setStatusMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    try {
-      const storedFeedback = window.localStorage.getItem(LOCAL_FEEDBACK_KEY);
-      if (storedFeedback) {
-        const parsedFeedback = JSON.parse(storedFeedback) as Testimonial[];
-        setSavedFeedback(Array.isArray(parsedFeedback) ? parsedFeedback : []);
+    let ignoreResponse = false;
+
+    async function loadTestimonials() {
+      try {
+        const response = await fetch("/api/testimonials");
+
+        if (!response.ok) {
+          throw new Error("Unable to load testimonials.");
+        }
+
+        const testimonials = (await response.json()) as Testimonial[];
+
+        if (!ignoreResponse) {
+          setDatabaseFeedback(Array.isArray(testimonials) ? testimonials : []);
+        }
+      } catch {
+        if (!ignoreResponse) {
+          setStatusMessage("Database is not connected. Start the API with npm run dev or npm run api.");
+        }
       }
-    } catch {
-      setSavedFeedback([]);
     }
+
+    loadTestimonials();
+
+    return () => {
+      ignoreResponse = true;
+    };
   }, []);
 
-  useEffect(() => {
-    window.localStorage.setItem(LOCAL_FEEDBACK_KEY, JSON.stringify(savedFeedback));
-  }, [savedFeedback]);
-
   const allTestimonials = useMemo(
-    () => [...savedFeedback, ...testimonials],
-    [savedFeedback, testimonials],
+    () => [...databaseFeedback, ...sampleTestimonials],
+    [databaseFeedback],
   );
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const trimmedName = formData.name.trim();
@@ -117,19 +130,41 @@ export function TestimonialsPage() {
       return;
     }
 
-    const newFeedback: Testimonial = {
-      id: `feedback-${Date.now()}`,
-      name: trimmedName,
-      role: trimmedRole || "Client Feedback",
-      rating: formData.rating,
-      text: trimmedText,
-      result: trimmedResult,
-      createdAt: new Date().toISOString(),
-    };
+    setIsSubmitting(true);
+    setStatusMessage("");
 
-    setSavedFeedback((currentFeedback) => [newFeedback, ...currentFeedback]);
-    setFormData({ name: "", role: "", rating: 5, text: "", result: "" });
-    setStatusMessage("Thank you. Your feedback has been saved locally.");
+    try {
+      const response = await fetch("/api/testimonials", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: trimmedName,
+          role: trimmedRole,
+          rating: formData.rating,
+          text: trimmedText,
+          result: trimmedResult,
+        }),
+      });
+      const newFeedback = (await response.json()) as Testimonial | { error?: string };
+
+      if (!response.ok || "error" in newFeedback) {
+        throw new Error("error" in newFeedback ? newFeedback.error : "Unable to save feedback.");
+      }
+
+      setDatabaseFeedback((currentFeedback) => [newFeedback, ...currentFeedback]);
+      setFormData({ name: "", role: "", rating: 5, text: "", result: "" });
+      setStatusMessage("Thank you. Your feedback has been saved to the database.");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error
+          ? error.message
+          : "Could not save feedback. Please make sure the database API is running.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -161,7 +196,7 @@ export function TestimonialsPage() {
             >
               <h2 className="text-4xl mb-4">Share Your <span className="text-primary">Feedback</span></h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                Visitors and clients can add their experience here. Submitted feedback is saved in the browser's local database and will stay available on this device after refresh.
+                Visitors and clients can add their experience here. Submitted feedback is saved to the testimonials database and stays available after refresh.
               </p>
             </motion.div>
 
@@ -252,10 +287,11 @@ export function TestimonialsPage() {
 
               <button
                 type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-4 font-medium text-white transition-all hover:bg-primary/90 sm:w-auto"
+                disabled={isSubmitting}
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-4 font-medium text-white transition-all hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
               >
                 <Send className="h-5 w-5" />
-                Save Feedback
+                {isSubmitting ? "Saving..." : "Save Feedback"}
               </button>
             </motion.form>
           </div>
